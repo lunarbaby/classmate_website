@@ -1,0 +1,93 @@
+body, html {
+ background-color: #B39BC8;
+ color: #F0EBF4;
+ height: 100%;
+ font-size: 1.2em;
+
+}
+/*General styling*/
+h1 {
+    text-align: center;
+    font-size: 2.2em;
+}
+/*Navigation bar*/
+nav {
+    background-color: #E64398;
+    width: 100%;
+    display: block;
+    padding: 1.5%;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    border: 0.1em solid #A1C3D1;
+    border-radius: 1em;
+    padding: 0.3em;
+}
+
+nav a:visited{
+    color: #000;
+}
+
+nav a:link{
+    color: #F0EBF4;
+}
+
+/*Styling for the main page*/
+
+.bigpicture {
+    background-image: url("photos/ballpen-blur-close-up-461077.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.picturetext{
+    text-align: center;
+    background-color: #B39BC8;
+    width: 59%;
+    position: relative;
+    top: 30%;
+    left: 15%;
+    color: #FFF;
+    padding: 20px;
+
+}
+
+@media only screen and (min-width: 768px) {
+    top: 35%;
+    left: 20%;
+}
+
+@media only screen and (min-width: 992px) {
+   top: 35%;
+}
+
+button {
+    background-color: #F0EBF4;
+}
+
+button a{
+    color: #E64398;
+}
+
+/*About Me*/
+
+article{
+    background-color:#FFF;
+    color: #E64398;
+    border: 2px solid #A1C3D1;
+}
+
+/*Contact*/
+
+form {
+    left: 43%;
+    top: 18%;
+    position: absolute;
+    margin-top: 0.8em;
+    
+}
