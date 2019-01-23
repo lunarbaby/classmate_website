@@ -8,22 +8,44 @@ body, html {
 /*General styling*/
 h1 {
     text-align: center;
-    font-size: 2.2em;
+    font-size: 2.6em;
+}
+
+h2{
+    visibility: hidden;
+    font-size: 0em;
+}
+
+@media screen and (min-width: 768px){
+    h1 {
+        font-size: 3em;
+}
+    h2 {
+        visibility: visible;
+        font-size: 2em;
+        text-align: center;
+}
+}
+
+a {
+    text-decoration: none;
+}
+
+i {
+    padding-right: 0.2em;
 }
 /*Navigation bar*/
 nav {
     background-color: #E64398;
     width: 100%;
     display: block;
-    padding: 1.5%;
+    padding: 2.2%;
     text-align: center;
 }
 
 nav a {
-    text-decoration: none;
-    border: 0.1em solid #A1C3D1;
-    border-radius: 1em;
     padding: 0.3em;
+    font-size: 0.8em;
 }
 
 nav a:visited{
@@ -32,6 +54,13 @@ nav a:visited{
 
 nav a:link{
     color: #F0EBF4;
+}
+
+@media screen and (min-width: 768px) {
+   nav {
+    font-size: 1.8em;
+    padding: 1.5%;
+   } 
 }
 
 /*Styling for the main page*/
@@ -50,20 +79,29 @@ nav a:link{
     background-color: #B39BC8;
     width: 59%;
     position: relative;
-    top: 30%;
+    top: 20%;
     left: 15%;
     color: #FFF;
     padding: 20px;
-
+    
 }
 
-@media only screen and (min-width: 768px) {
-    top: 35%;
-    left: 20%;
+@media screen and (min-width: 768px) {
+  .bigpicture {
+    top: 0%;
+    left: 0%;
+    } 
+    .picturetext {
+        font-size: 1.4em;
+    }
+    
 }
 
-@media only screen and (min-width: 992px) {
-   top: 35%;
+@media screen and (min-width: 992px) {
+  .bigpicture {
+    top: 0%;
+    left: 0%;
+  } 
 }
 
 button {
@@ -76,18 +114,130 @@ button a{
 
 /*About Me*/
 
-article{
-    background-color:#FFF;
-    color: #E64398;
-    border: 2px solid #A1C3D1;
+.middle {
+    left: 50%;
+}
+
+.circle{
+    background-color:#000;
+    color: #F0EBF4;
+    border: 4px solid #E64398;
+    margin: 2%;
+    border-radius: 50%;
+    padding: 3em;
+}
+
+@media screen and (min-width: 768px) {
+    .circle {
+    border-radius: 50%;
+    background-color: #F0EBF4;
+    color: #000;
+    padding: 5em;
+    height: 20em;
+    width: 20em;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
 }
 
 /*Contact*/
 
 form {
-    left: 43%;
-    top: 18%;
-    position: absolute;
-    margin-top: 0.8em;
-    
+    left: 10%;
+    top: 0%;
+    position: relative;
+    margin-top: 1.5em;
+    }
+
+input[type=text]{
+    width: 85%;
+    padding: 0.5em .8em;
+    box-sizing: border-box;
+    margin: 0.1em 0em 0.4em 0em;
 }
+
+input[type=email]{
+    width: 85%;
+    padding: 0.5em 0.8em;
+    box-sizing: border-box;
+    margin: 0.0em 0em 0.4em 0em;
+}
+
+textarea {
+    width: 85%;
+    box-sizing: border-box;
+    margin: 0.0em 0em 0.4em 0em;
+}
+
+@media screen and (min-width: 765px) {
+    form {
+        left: 8%;
+        top: 2%;
+        position: relative;
+        margin-top: 1em; 
+    }
+
+    h1 {
+        margin: 0.5em auto 0.2em auto;
+        padding-bottom: 0.01%;
+    }
+
+    h2 {
+        margin-top: 0%;
+        font-size: 2.2em;
+    }
+
+   }
+
+/*Blog*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 1.1em;
+    grid-auto-rows: minmax(10em, auto);
+    margin-left: 1em;
+}
+
+@media screen and (max-width: 1000px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 4fr);
+    }
+}
+
+
+/*Animations*/
+@keyframes hvr-icon-buzz {
+    50% {
+      -webkit-transform: translateX(3px) rotate(2deg);
+      transform: translateX(3px) rotate(2deg);
+    }
+    100% {
+      -webkit-transform: translateX(-3px) rotate(-2deg);
+      transform: translateX(-3px) rotate(-2deg);
+    }
+  }
+  .hvr-icon-buzz {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-icon-buzz .hvr-icon {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  .hvr-icon-buzz:hover .hvr-icon, .hvr-icon-buzz:focus .hvr-icon, .hvr-icon-buzz:active .hvr-icon {
+    -webkit-animation-name: hvr-icon-buzz;
+    animation-name: hvr-icon-buzz;
+    -webkit-animation-duration: 0.15s;
+    animation-duration: 0.15s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;}
