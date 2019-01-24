@@ -1,4 +1,4 @@
-#:computer: Code Bootcamp Week Two Assignment
+# :computer: Code Bootcamp Week Two Assignment
 
 ## Make a website to introduce a classmate
 
