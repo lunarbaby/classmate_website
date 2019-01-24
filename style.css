@@ -1,6 +1,6 @@
 body, html {
- background-color: #B39BC8;
- color: #F0EBF4;
+ background-color: #673DFD;
+ color: #F4F2F1;
  height: 100%;
  font-size: 1.2em;
 
@@ -9,11 +9,24 @@ body, html {
 h1 {
     text-align: center;
     font-size: 2.6em;
+    text-shadow: 0 0 20px #000000;
 }
 
 h2{
     visibility: hidden;
     font-size: 0em;
+}
+
+/*Header transition*/
+.header-transition {
+    font-weight: bolder;
+    transition-property: font-weight;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+.header-transition:hover {
+    font-weight: lighter;
 }
 
 @media screen and (min-width: 768px){
@@ -53,7 +66,7 @@ nav a:visited{
 }
 
 nav a:link{
-    color: #F0EBF4;
+    color: #F4F2F1;
 }
 
 @media screen and (min-width: 768px) {
@@ -66,13 +79,13 @@ nav a:link{
 /*Styling for the main page*/
 
 .bigpicture {
-    background-image: url("photos/ballpen-blur-close-up-461077.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("photos/ballpen-blur-close-up-461077.jpg");
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-}
+   }
 
 .picturetext{
     text-align: center;
@@ -114,31 +127,27 @@ button a{
 
 /*About Me*/
 
-.middle {
-    left: 50%;
-}
-
-.circle{
+.bio {
     background-color:#000;
     color: #F0EBF4;
     border: 4px solid #E64398;
     margin: 2%;
-    border-radius: 50%;
+    border-radius: 20%;
     padding: 3em;
-}
+    box-shadow: inset 0 0 30px #fff;
+    }
 
+    .wrapper{
+      overflow-wrap: break-word;  
+    }
 @media screen and (min-width: 768px) {
-    .circle {
+    .bio {
     border-radius: 50%;
     background-color: #F0EBF4;
     color: #000;
     padding: 5em;
-    height: 20em;
-    width: 20em;
     text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    
+    box-shadow: inset 0 0 20px #000000;   
 }
 
 }
@@ -199,6 +208,18 @@ textarea {
     grid-gap: 1.1em;
     grid-auto-rows: minmax(10em, auto);
     margin-left: 1em;
+}
+
+.blog-style{
+    background-color: #9BBFC8; 
+    border-radius: 20%;
+    text-align: center;
+    padding: 1em;
+    box-shadow: 2px 3px 5px 6px #2a2c2c;
+}
+
+ol, ul {
+    list-style-type: none;  
 }
 
 @media screen and (max-width: 1000px) {
